@@ -2,7 +2,7 @@ document.getElementById("searchbutton").addEventListener("click", async () => {
     const searchTerm = document.getElementById("search").value;
 
     // Call Netlify Function
-    const response = await fetch(`/.netlify/functions/searchBooks?query=${searchTerm}`);
+    const response = await fetch(`netlify/functions/searchBooks?query=${searchTerm}`);
     const data = await response.json();
 
     // Show results
@@ -14,3 +14,4 @@ document.getElementById("searchbutton").addEventListener("click", async () => {
         resultsDiv.appendChild(p);
     }
 });
+
